@@ -79,7 +79,7 @@ app.delete('/api/todos:todo_id', function(req, res) {// direction of sending
 });
 
 app.get('*', function(req, res) {
-	res.sendfile('./public/index.html'); // send index.html, when app start
+	res.sendfile('./index.html'); // send index.html, when app start
 });
 
 
