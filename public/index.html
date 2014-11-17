@@ -12,11 +12,8 @@
 
 
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <style>
-        html                    { overflow-y:scroll; }
-        body                    { padding-top:50px; }
-        #todo-list              { margin-bottom:30px; }
-    </style>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
 
@@ -29,11 +26,11 @@
 <body ng-controller="mainController">
     <div class="container">
 
-
-        <div class="jumbotron text-center">
-            <h1>You have <span class="label label-info">{{ todos.length }}</span> todos!</h1>
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+            <div class="jumbotron text-center">
+                <h1>You have <span class="label label-warning">{{ todos.length }}</span> to-dos!</h1>
+            </div>
         </div>
-
         <div id="todo-list" class="row">
             <div class="col-sm-4 col-sm-offset-4">
 
@@ -42,20 +39,21 @@
                         <input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text }}
                     </label>
                 </div>
+                <p class="text-center" ng-show="loading">
+                     <span class="fa fa-spinner fa-spin fa-3x"></span>
+                </p>
 
             </div>
         </div>
 
-        <div id="todo-form" class="row">
+        <div id="todo-form">
             <div class="col-sm-8 col-sm-offset-2 text-center">
                 <form>
                     <div class="form-group">
-
-
-                        <input type="text" class="form-control input-lg text-center" placeholder="Add your todo and press button." ng-model="formData.text">
+                        <input type="text" class="form-control input text-center" placeholder="Add your to-do and press button." ng-model="formData.text">
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add todo!</button>
+                    <button type="submit" class="btn btn-danger btn-lg" ng-click="createTodo()">Add todo!</button>
                 </form>
             </div>
         </div>
