@@ -1,14 +1,15 @@
 {
-	"name"					: "my-node-todo",
-	"version"				: "0.0.0",
-	"description"			: "My simple todo app based on scotch.io tutorial",
-	"main"					: "server.js",
-	"author"				: "MichealObi",
-	"dependencies"			: {
-		"express"			: "~4.7.2", 
-		"mongoose"			: "~3.6.2", 
-		"morgan"			: "~1.2.2", 
-		"body-parser"		: "~1.5.2",
-		"method-override"	: "~2.1.2"
-	}
+  "name"         : "node-todo",
+  "version"      : "0.0.0",
+  "description"  : "My interpretation of node todo.",
+  "main"         : "server.js",
+  "author"       : "MichealObi",
+  "dependencies" : {
+    "express"         : "~4.6.1",
+    "mongoose"        : "~3.8.13",
+    "morgan"          : "~1.1.1",
+    "body-parser"     : "~1.4.3",
+    "method-override" : "~2.1.1"
+  }
 }
+
